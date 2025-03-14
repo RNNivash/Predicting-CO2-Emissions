@@ -1,18 +1,20 @@
-### 🚀 Simple Linear Regression - Predicting CO2 Emissions  
+### 🚀 Predicting CO₂ Emissions using Linear Regression  
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)  
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-0.24%2B-orange)  
 ![Data Science](https://img.shields.io/badge/Data%20Science-Regression-green)
 
 ## 📌 Overview  
-This project demonstrates **Simple Linear Regression** using Python to analyze the relationship between vehicle engine size and CO₂ emissions. The dataset contains fuel consumption ratings and estimated CO₂ emissions for vehicles in Canada.  
+This project applies **Simple and Multiple Linear Regression** to analyze the relationship between vehicle attributes and **CO₂ emissions**. Using Python and `scikit-learn`, we build and evaluate predictive models to understand the key factors affecting emissions.  
 
 ## 📂 Dataset  
-The dataset used is `FuelConsumptionCo2.csv`, which includes attributes like:  
+The dataset `FuelConsumptionCo2.csv` includes the following key features:  
 - **Engine Size**  
 - **Cylinders**  
 - **Fuel Consumption (City, Highway, Combined)**  
 - **CO₂ Emissions (g/km)**  
+
+📌 **[Dataset Source](http://open.canada.ca/data/en/dataset/98f1a129-f628-4ce4-b24d-6f16bf24dd64)**  
 
 ## ⚙️ Installation & Requirements  
 Ensure you have Python and the necessary libraries installed:  
@@ -21,39 +23,40 @@ Ensure you have Python and the necessary libraries installed:
 pip install numpy pandas matplotlib scikit-learn
 ```
 
-## 📊 Steps in the Project  
+## 📊 Project Workflow  
 ### 1️⃣ Data Exploration  
 - Load dataset using `pandas`  
-- Visualize relationships between variables  
+- Analyze correlations using visualizations  
 
 ### 2️⃣ Data Preprocessing  
-- Select key features (`Engine Size`, `Fuel Consumption`, `CO₂ Emissions`)  
+- Select relevant features  
 - Split data into **Training (80%)** and **Testing (20%)**  
 
 ### 3️⃣ Model Training & Evaluation  
-- Train a **Linear Regression** model using `scikit-learn`  
-- Evaluate the model using:  
+#### ✅ **Simple Linear Regression**  
+- Uses **Engine Size** to predict CO₂ Emissions  
+- Evaluation Metrics:  
   - **Mean Absolute Error (MAE)**  
   - **Mean Squared Error (MSE)**  
   - **R² Score**  
 
-## 📈 Results  
-- **Engine Size vs. CO₂ Emissions**: Moderate correlation  
-- **Fuel Consumption vs. CO₂ Emissions**: Stronger correlation  
-- **Model Performance**: Regression using **Fuel Consumption** as a feature performed better than using **Engine Size** alone.  
+#### ✅ **Multiple Linear Regression**  
+- Uses multiple predictors:  
+  - **Engine Size**, **Cylinders**, **Fuel Consumption (Combined)**  
+- Improves prediction accuracy compared to Simple Linear Regression  
 
-## 📌 Key Takeaways  
-✅ Fuel Consumption is a stronger predictor of CO₂ emissions than Engine Size.  
-✅ Evaluating different features helps improve model accuracy.  
-✅ Linear Regression is a great starting point for predictive modeling.  
+## 📈 Results & Key Takeaways  
+- **Simple Linear Regression**: Shows a moderate correlation between **Engine Size** and **CO₂ Emissions**  
+- **Multiple Linear Regression (MLR)** provides a more accurate model by incorporating multiple variables  
+- **MLR outperforms Simple Regression**, as fuel consumption and number of cylinders significantly impact emissions  
+- **R² Score Comparison**: MLR achieves a higher score, indicating better predictive power  
 
 ## 🏆 Future Enhancements  
-🔹 Try **Multiple Linear Regression** with multiple features  
-🔹 Implement **Polynomial Regression** for better fitting  
-🔹 Use **Feature Engineering** for better model accuracy  
+🔹 Experiment with feature selection techniques to improve model performance  
+🔹 Apply **Polynomial Regression** for non-linear relationships  
+🔹 Implement **Regularization (Ridge & Lasso Regression)** to handle multicollinearity  
 
 ---
 
 💡 **Author**: [Nivash R N](https://www.linkedin.com/in/nivash-r-n/)  
 🔗 **Portfolio**: [rnnivash.github.io/My_Port/](https://rnnivash.github.io/My_Port/)  
-📧 **Contact**: hello.nivashinsights@gmail.com  
